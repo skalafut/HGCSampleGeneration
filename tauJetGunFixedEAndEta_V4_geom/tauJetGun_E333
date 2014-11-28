@@ -1,0 +1,11 @@
+universe = vanilla 
+Executable = /uscms/home/skalafut/nobackup/HGCalSimulations/ParticleGun/tauJetGunEmeanEn/runTauJetGun_EmeanEn_meanEta_replaceEta_NUM.csh
+Requirements = OpSys == "LINUX"&& (Arch != "DUMMY" )
+Should_Transfer_Files = YES
+WhenToTransferOutput = ON_EXIT
+Transfer_Input_Files = SingleTauJetEmeanEn_cfi_py_GEN_SIM_meanEta_replaceEta_NUM.py, forHGCSims_SLHC18.tar 
+Arguments = $(Process)
+Output = tauJetGun_EmeanEn_meanEta_replaceEta_NUM_$(Cluster)_$(Process).stdout
+Error = tauJetGun_EmeanEn_meanEta_replaceEta_NUM_$(Cluster)_$(Process).stderr
+Log = tauJetGun_EmeanEn_meanEta_replaceEta_NUM_$(Cluster)_$(Process).log
+Queue 1 

@@ -1,0 +1,11 @@
+universe = vanilla 
+Executable = /uscms/home/skalafut/nobackup/HGCalSimulations/ParticleGun/SLHC20_HGCV5_sims/chargedPiPtmeanEn/runChargedPiPtmeanEn_NUM_140PU.csh
+Requirements = OpSys == "LINUX"&& (Arch != "DUMMY" )
+Should_Transfer_Files = YES
+WhenToTransferOutput = ON_EXIT
+Transfer_Input_Files = MinBias_14TeV_HGCV5_1000evts.root, step1_chargedPiGun_PtmeanEn_NUM_100evts.root, step2_ChargedPi_Pt_meanEn_140PU_NUM.py, step3_ChargedPi_Pt_meanEn_140PU_NUM.py
+Arguments = $(Process)
+Output = chargedPi_PtmeanEn_NUM_140PU_$(Cluster)_$(Process).stdout
+Error = chargedPi_PtmeanEn_NUM_140PU_$(Cluster)_$(Process).stderr
+Log = chargedPi_PtmeanEn_NUM_140PU_$(Cluster)_$(Process).log
+Queue 1 

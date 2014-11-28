@@ -1,0 +1,11 @@
+universe = vanilla 
+Executable = /uscms/home/skalafut/nobackup/HGCalSimulations/ParticleGun/chgdPionGunEmeanEn/runChgdPionGun_EmeanEn_meanEta_replaceEta_NUM_75PU.csh
+Requirements = OpSys == "LINUX"&& (Arch != "DUMMY" )
+Should_Transfer_Files = YES
+WhenToTransferOutput = ON_EXIT
+Transfer_Input_Files = step3_EmeanEn_meanEta_replaceEta_75PU_NUM.py, forSLHC20_patch1.tar, step2_chgdPionGun_EmeanEn_EtareplaceEta_75PU_NUM_30evts.root
+Arguments = $(Process)
+Output = chgdPionGun_EmeanEn_meanEta_replaceEta_75PU_NUM_$(Cluster)_$(Process).stdout
+Error = chgdPionGun_EmeanEn_meanEta_replaceEta_75PU_NUM_$(Cluster)_$(Process).stderr
+Log = chgdPionGun_EmeanEn_meanEta_replaceEta_75PU_NUM_$(Cluster)_$(Process).log
+Queue 1 
